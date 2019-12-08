@@ -35,6 +35,9 @@ int Algorithm::encryptFile(string fileName)
 	{
 		//This will get the characters from the inputFile and increment their values by 5
 		//And then output them into tempFile
+		//There is bug with this code structure that adds on to the end. It does it again...
+		//in the next While loop
+		//If you're reading this comment line in particular, the bug wasn't fixed.
 			inputFile >> ch;
 			ch = ch + 5;
 			tempFile << ch;
